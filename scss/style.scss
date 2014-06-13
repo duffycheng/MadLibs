@@ -2,7 +2,7 @@
 @import "./_mixins.scss";
 @import "./_var.scss";
 
-body{
+html,body{
   background-color:$dark_gray;
 }
 
@@ -13,7 +13,7 @@ div{
   }
 .body{
   width:800px;
-  margin:0 auto;
+  margin:20px auto;
   background-color:#FFF;
   padding:30px;
 

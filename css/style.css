@@ -293,7 +293,7 @@ table {
 /*query nav*/
 /*reputation*/
 /** touch **/
-body {
+html, body {
   background-color: #777777;
 }
 
@@ -306,7 +306,7 @@ div {
 
 .body {
   width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: #FFF;
   padding: 30px;
 }
