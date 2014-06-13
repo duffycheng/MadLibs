@@ -1,0 +1,81 @@
+@import "./_normalize.scss";
+@import "./_mixins.scss";
+@import "./_var.scss";
+
+$border: 1px solid #CCC;
+div{
+    border:$border;
+    @include box-sizing(border-box);
+  }
+.body{
+  width:800px;
+  margin:0 auto;
+  background-color:#FFF;
+  padding:20px;
+  
+}
+.header{
+  padding-left:220px;
+  position:relative;
+  border-bottom:none;
+  &:before{
+    content:"";
+    background:url(../images/mad-lib-happy-face.png) center center no-repeat;
+    background-size: 120px 120px;
+    width:140px;
+    height:140px;
+    position:absolute;
+    top:0;
+    left:0;
+     border-right:$border;
+  }
+  h1{
+    @include box-sizing(border-box);
+    position:relative;
+    line-height: 60px;
+    font-size:60px;
+    padding-top:80px;
+    margin:0;
+  &:before{
+    content:"";
+    background:url(../images/ng-mad-libs-logo.png) no-repeat;
+    background-size: contain;
+    width:460px;
+    height:80px;
+    position:absolute;
+    top:0;
+    left:40px;
+  }
+  }
+}
+.input-area{
+  @include clearfix;
+  border-bottom:none;
+  padding:20px;
+  h2{
+    margin:20px 0 15px;
+  }
+  .left,.middle,.right{
+    float:left;
+    width:33.33333%;
+    text-align:center;
+    border:none;
+  }
+  input{
+    width:200px;
+    margin:5px 0;
+    padding:5px;
+    line-height:15px;
+    border:1px solid #000;
+  }
+}
+
+p{
+  line-height: 2em;
+  margin:20px;
+}
+.blank{
+  color:$blue;
+  border-bottom:1px solid $gray;
+  min-width:150px;
+}
