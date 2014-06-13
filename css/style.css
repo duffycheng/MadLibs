@@ -293,6 +293,10 @@ table {
 /*query nav*/
 /*reputation*/
 /** touch **/
+body {
+  background-color: #777777;
+}
+
 div {
   border: 1px solid #cccccc;
   -webkit-box-sizing: border-box;
@@ -304,13 +308,16 @@ div {
   width: 800px;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 20px;
+  padding: 30px;
 }
 
 .header {
   padding-left: 220px;
   position: relative;
+  border-width: 3px;
   border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .header:before {
   content: "";
@@ -346,7 +353,10 @@ div {
 
 .input-area {
   border-bottom: none;
+  border-left-width: 3px;
+  border-right-width: 3px;
   padding: 20px;
+  background-color: #b1d1e1;
 }
 .input-area {
   zoom: 1;
@@ -376,12 +386,20 @@ div {
   border: 1px solid #000;
 }
 
+.content {
+  background-color: #dfe8ca;
+  border-width: 3px;
+  border-top-width: 1px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 p {
   line-height: 2em;
   margin: 20px;
 }
 
-.blank {
+.blank.ng-binding {
   color: #1180c2;
   border-bottom: 1px solid #cccccc;
   min-width: 150px;
