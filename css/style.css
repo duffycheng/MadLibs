@@ -378,7 +378,14 @@ div {
   text-align: center;
   border: none;
 }
-.input-area input {
+.input-area input[type=radio] {
+  vertical-align: text-bottom;
+  margin: 2px 3px;
+}
+.input-area label {
+  margin-right: 3px;
+}
+.input-area input[type=text] {
   width: 200px;
   margin: 5px 0;
   padding: 5px;

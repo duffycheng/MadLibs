@@ -1,40 +1,44 @@
 <!doctype html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="madLibs">
 <head>
 	<meta charset="UTF-8">
 	<title>MadLibs Game</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-init="female_name='female name';job_title='job title';tedious_task='tedious task';dirty_task='dirty task';celebrity='celebrity';useless_skill='useless skill';obnoxiuous_celbertity='obnoxiuous celbertity';huge_number='huge number';adjective='adjective'">
-	<section class="body">
+<body>
+	<section class="body" ng-controller="madLibsController">
 		<div class="header">
 			<h1>Automate This!</h1>
 		</div>
 		<div class="input-area">
 			<h2>Provide the following words:</h2>
+			<p>I am 
+				<input type="radio" ng-checked="{{gender.pronoun == 'he'}}" ng-click="gender.pronoun='he';gender.poss='his'" id="male" name="gender" value="male" placeholder=""><label for="gender">Male</label>
+				<input type="radio" ng-checked="{{gender.pronoun == 'she'}}" ng-click="gender.pronoun='she';gender.possessive='her'" id="female" name="gender" value="female" placeholder=""><label for="gender">Female</label>
+			</p>
 			<div class="left">
-				<input type="text" name="" value="" placeholder="female name" ng-model="female_name">
-				<input type="text" name="" value="" placeholder="job title" ng-model="job_title">
-				<input type="text" name="" value="" placeholder="tedious task" ng-model="tedious_task">
+				<input type="text" name="" value="" placeholder="my name" ng-model="data.my_name">
+				<input type="text" name="" value="" placeholder="job title" ng-model="data.job_title">
+				<input type="text" name="" value="" placeholder="tedious task" ng-model="data.tedious_task">
 			</div>
 			<div class="middle">
-				<input type="text" name="" value="" placeholder="dirty task" ng-model="dirty_task">
-				<input type="text" name="" value="" placeholder="celebrity" ng-model="celebrity">
-				<input type="text" name="" value="" placeholder="useless skill" ng-model="useless_skill">
+				<input type="text" name="" value="" placeholder="dirty task" ng-model="data.dirty_task">
+				<input type="text" name="" value="" placeholder="celebrity" ng-model="data.celebrity">
+				<input type="text" name="" value="" placeholder="useless skill" ng-model="data.useless_skill">
 			</div>
 			<div class="right">
-				<input type="text" name="" value="" placeholder="obnoxiuous celbertity" ng-model="obnoxiuous_celbertity">
-				<input type="text" name="" value="" placeholder="huge number" ng-model="huge_number">
-				<input type="text" name="" value="" placeholder="adjective" ng-model="adjective">
+				<input type="text" name="" value="" placeholder="obnoxiuous celbertity" ng-model="data.obnoxiuous_celbertity">
+				<input type="text" name="" value="" placeholder="huge number" ng-model="data.huge_number">
+				<input type="text" name="" value="" placeholder="adjective" ng-model="data.adjective">
 			</div>
 			
 		</div>
 		<div class="content">
 			<p>
-				<span class="blank">{{female_name}}</span> was a <span class="blank">{{job_title}}</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span class="blank">{{tedious_task}}</span> and <span class="blank">{{dirty_task}}</span>. So, <span class="blank">{{female_name}}</span> met with her life mentor <span class="blank">{{celebrity}}</span> who told her to learn how to <span class="blank">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="blank">{{useless_skill}}</span> so she studied programming instead. 
+				<span class="blank" ng-style='width:150px;'>{{data.my_name}}</span> was a <span class="blank">{{data.job_title}}</span> who loved technology. Although {{gender.pronoun}} loved parts of {{poss}} job, {{gender.pronoun}} absolutely hated  <span class="blank">{{data.tedious_task}}</span> and <span class="blank">{{data.dirty_task}}</span>. So, <span class="blank">{{data.my_name}}</span> met with {{poss}} life mentor <span class="blank">{{data.celebrity}}</span> who told {{poss}} to learn how to <span class="blank">{{data.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="blank">{{data.useless_skill}}</span> so {{gender.pronoun}} studied programming instead. 
 			</p>
 			<p>
-				What a great decision! With her new skills, <span class="blank">{{female_name}}</span> built a(n) <span class="blank">{{adjective}}</span> robot named <span class="blank">{{obnoxiuous_celbertity}}</span> that not only loved <span class="blank">{{dirty_task}}</span> but did it <span class="blank">{{huge_number}}</span> faster. 
+				What a great decision! With {{poss}} new skills, <span class="blank">{{data.my_name}}</span> built a(n) <span class="blank">{{data.adjective}}</span> robot named <span class="blank">{{data.obnoxiuous_celbertity}}</span> that not only loved <span class="blank">{{data.dirty_task}}</span> but did it <span class="blank">{{data.huge_number}}</span> faster. 
 			</p>
 		</div>
 	</section>
