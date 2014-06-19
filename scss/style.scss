@@ -98,8 +98,12 @@ p{
   line-height: 2em;
   margin:20px;
 }
-.blank.ng-binding{
+.blank{
+  @include box-sizing(border-box);
+  display: inline-block;
   color:$blue;
   border-bottom:1px solid $gray;
-  min-width:150px;
+  width:150px;
+  text-align:center;
+  line-height: 20pxv ;
 }
