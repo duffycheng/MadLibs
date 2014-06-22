@@ -1,6 +1,7 @@
 @import "./_normalize.scss";
 @import "./_mixins.scss";
 @import "./_var.scss";
+@import "./_button.scss";
 
 html,body{
   background-color:$dark_gray;
@@ -78,20 +79,34 @@ div{
   label{
     margin-right: 3px;
   }
-  input[type=text]{
+  input[type=text],input[type=number]{
     width:200px;
-    margin:5px 0;
+    margin:10px 0 0;
     padding:5px;
     line-height:15px;
     border:1px solid #000;
   }
+  .button{
+    float:right;
+    margin-top:10px;
+  }
+  .warning{
+    margin:0;
+    color:$red;
+    line-height: 1.3em;
+  }
 }
 .content{
+  @include clearfix;
  background-color:$light_pale_green;
  border-width:3px;
  border-top-width:1px;
  border-bottom-left-radius:15px;
   border-bottom-right-radius:15px;
+  a{
+    float:right;
+    margin:0 10px 10px 0;
+  }
 }
 
 p{
@@ -105,5 +120,5 @@ p{
   border-bottom:1px solid $gray;
   width:150px;
   text-align:center;
-  line-height: 20pxv ;
+  line-height: 20px;
 }

@@ -1,19 +1,27 @@
 var madLibs = angular.module('madLibs',[]);
-madLibs.controller('madLibsController',function($scope){
-	$scope.data = {
-		my_name:'my name',
-		job_title:  'job title',
-		tedious_task: 'tedious task',
-		dirty_task: 'dirty task',
-		celebrity: 'celebrity',
-		useless_skill: 'useless skill',
-		obnoxiuous_celbertity: 'obnoxiuous celbertity',
-		huge_number: 'huge number',
-		adjective: 'adjective'
-	};
+madLibs.controller('FormCrtl',function($scope){
+	//no input default data
+	$scope.data = {};
+	//radio pre select
 	$scope.gender = {
 		pronoun: 'she',
 		poss: 'her'
 	};
-	
+	//only click on the "Generate My MadLib" button will show the form, this action is separated from the validation
+	$scope.isFormHide = false;
+
+	$scope.setForHide = function(){
+		$scope.isFormHide = false;
+	};
+
+	$scope.clickSubmit = function(){
+		$scope.isFormHide = true;
+	}
+	//reset button
+	$scope.reset = function(){
+		$scope.data = {};
+		$scope.submitted = false;
+		$scope.isFormHide = false;
+	};
+
 });
