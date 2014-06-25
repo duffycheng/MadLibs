@@ -721,6 +721,9 @@ div {
   opacity: 0;
 }
 .input-area.ng-hide-add, .input-area.ng-hide.ng-hide-remove {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: easeout;
+  -webkit-animation-name: slide;
   animation-duration: 1s;
   animation-timing-function: easeout;
   animation-name: slide;
