@@ -10,6 +10,7 @@
 		<div class="header">
 			<h1>Automate This!</h1>
 		</div>
+		<div class="animation-container">
 		<div class="input-area" ng-hide="isFormHide && madLibsForm.$valid">
 			<h2>Provide the following words:</h2>
 			<form name="madLibsForm"  ng-submit="submitted=true;submit()" novalidate>
@@ -55,8 +56,10 @@
 			</p>
 			<a href="#" class="button large" ng-click="reset()">Reset</a>
 		</div>
+		</div>
 	</section>
 <script type="text/javascript" src="libs/angular.js"></script>
+<script type="text/javascript" src="libs/angular-animate.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var madLibs = angular.module('madLibs',[]);
+var madLibs = angular.module('madLibs',['ngAnimate']);
 madLibs.controller('FormCrtl',function($scope){
 	//no input default data
 	$scope.data = {};
